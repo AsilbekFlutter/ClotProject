@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:home_project/pages/sendEmailPage.dart';
+import 'package:home_project/pages/yourselfPage.dart';
 
 class ForgotPasswordPage extends StatelessWidget {
   const ForgotPasswordPage({super.key});
@@ -35,7 +37,9 @@ class ForgotPasswordPage extends StatelessWidget {
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => SendEmailPage(),));
+                  },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: const Color(0xFF8E6CEF),
                   ),

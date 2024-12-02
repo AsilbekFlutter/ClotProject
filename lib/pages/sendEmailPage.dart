@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:home_project/pages/yourselfPage.dart';
 
 class SendEmailPage extends StatelessWidget {
   const SendEmailPage({super.key});
@@ -31,7 +32,14 @@ class SendEmailPage extends StatelessWidget {
                   style: ElevatedButton.styleFrom(
                     backgroundColor: const Color(0xFF8E6CEF),
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => YourselfPage(),
+                      ),
+                    );
+                  },
                   child: const Text(
                     "Return to Login",
                     style: TextStyle(
