@@ -36,14 +36,7 @@ class PasswordPage extends StatelessWidget {
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => CreateAccountPage(),
-                      ),
-                    );
-                  },
+                  onPressed: () {},
                   style: ElevatedButton.styleFrom(
                     backgroundColor: const Color(0xFF8E6CEF),
                   ),
@@ -53,18 +46,22 @@ class PasswordPage extends StatelessWidget {
                   ),
                 ),
               ),
-              const SizedBox(height: 16),
-              RichText(
-                text: const TextSpan(
-                  text: "Forgot Password ? ",
-                  style: TextStyle(color: Colors.black),
-                  children: [
-                    TextSpan(
-                      text: "Reset",
-                      style: TextStyle(fontWeight: FontWeight.w700),
+              Row(
+                children: [
+                  const Text(
+                    "Dont have an Account ?",
+                    style:
+                    TextStyle(fontSize: 12, fontWeight: FontWeight.w500),
+                  ),
+                  TextButton(
+                    onPressed: () {},
+                    child: const Text(
+                      "Create One",
+                      style: TextStyle(
+                          fontSize: 12, fontWeight: FontWeight.w700, color: Colors.black),
                     ),
-                  ],
-                ),
+                  ),
+                ],
               ),
             ],
           ),

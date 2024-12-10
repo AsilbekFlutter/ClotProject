@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:home_project/core/route/route_names.dart';
 import 'package:home_project/pages/forgot_password.dart';
 
 class CreateAccountPage extends StatelessWidget {
@@ -80,7 +81,7 @@ class CreateAccountPage extends StatelessWidget {
                   width: double.infinity,
                   child: ElevatedButton(
                     onPressed: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => ForgotPasswordPage(),));
+                      Navigator.pushNamed(context, RouteNames.yourselfPage);
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: const Color(0xFF8E6CEF),
@@ -91,18 +92,24 @@ class CreateAccountPage extends StatelessWidget {
                     ),
                   ),
                 ),
-                const SizedBox(height: 40),
-                RichText(
-                  text: const TextSpan(
-                    text: "Forgot Password ? ",
-                    style: TextStyle(color: Colors.black),
-                    children: [
-                      TextSpan(
-                        text: "Reset",
-                        style: TextStyle(fontWeight: FontWeight.w700),
+                Row(
+                  children: [
+                    const Text(
+                      "Forgot Password ?",
+                      style:
+                      TextStyle(fontSize: 12, fontWeight: FontWeight.w500),
+                    ),
+                    TextButton(
+                      onPressed: () {
+                        Navigator.pushNamed(context, RouteNames.sendEmailPage);
+                      },
+                      child: const Text(
+                        "Reset",
+                        style: TextStyle(
+                            fontSize: 12, fontWeight: FontWeight.w700, color: Colors.black),
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
               ],
             ),

@@ -1,21 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:home_project/pages/signIn_page.dart';
+import 'package:home_project/pages/signin_email_page.dart';
 
-class EntrancePage extends StatefulWidget {
-  const EntrancePage({super.key});
+class SplashPage extends StatefulWidget {
+  const SplashPage({super.key});
 
   @override
-  _EntrancePageState createState() => _EntrancePageState();
+  _SplashPageState createState() => _SplashPageState();
 }
 
-class _EntrancePageState extends State<EntrancePage> {
+class _SplashPageState extends State<SplashPage> {
   @override
   void initState() {
     super.initState();
-    Future.delayed(Duration(seconds: 3), () {
+    Future.delayed(const Duration(seconds: 1), () {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => SignInPage()),
+        MaterialPageRoute(builder: (context) => SignInEmailPage()),
       );
     });
   }

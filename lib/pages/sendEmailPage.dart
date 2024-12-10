@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:home_project/core/route/route_names.dart';
 import 'package:home_project/pages/yourselfPage.dart';
 
 class SendEmailPage extends StatelessWidget {
@@ -33,12 +34,7 @@ class SendEmailPage extends StatelessWidget {
                     backgroundColor: const Color(0xFF8E6CEF),
                   ),
                   onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => YourselfPage(),
-                      ),
-                    );
+                    Navigator.pushNamed(context, RouteNames.signInEmailPage);
                   },
                   child: const Text(
                     "Return to Login",
